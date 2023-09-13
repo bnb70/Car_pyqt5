@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Dialog</class>
  <widget class="QDialog" name="Dialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,19 +16,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="Confirm_Button">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>200</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>確認設置</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="Star_Button">
    <property name="geometry">
     <rect>
@@ -53,6 +43,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="time_input01">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -63,6 +56,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="time_input02">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -73,6 +69,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="time_input03">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -83,6 +82,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="time_input04">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -93,6 +95,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="time_input05">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -103,6 +108,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -116,6 +124,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -129,6 +140,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -142,6 +156,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -155,6 +172,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -168,6 +188,9 @@
    </property>
   </widget>
   <widget class="QSpinBox" name="speed_input">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -184,6 +207,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -220,6 +246,39 @@
    </property>
    <property name="text">
     <string>計時器:關閉</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>目前秒數:0秒</string>
    </property>
   </widget>
  </widget>
