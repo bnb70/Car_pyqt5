@@ -81,7 +81,7 @@ class Ui_Dialog(object):
         self.label_6.setText(_translate("Dialog", "速度(10~100)"))
         self.Time_check.setText(_translate("Dialog", "開/關計時器"))
         self.label_7.setText(_translate("Dialog", "計時器:關閉"))
-        self.label_8.setText(_translate("Dialog", "目前秒數:0秒"))
+        self.label_8.setText(_translate("Dialog", "秒數顯示"))
 
 
 if __name__ == "__main__":

@@ -191,7 +191,7 @@
     </font>
    </property>
    <property name="text">
-    <string>目前秒數:0秒</string>
+    <string>秒數顯示</string>
    </property>
   </widget>
  </widget>
