@@ -28,19 +28,13 @@ class MainWindow(QtWidgets.QMainWindow):
             if self.time_state == True:
                 print("Use_Timer")
                 self.timer_first.start(100)
-                if self.count_first_ >= self.ui.time_input01.value():
-                    self.drive.move_RL(speed=self.ui.speed_input.value())
-                    self.timer_turn.start(100)
-                if self.timer_turn_ >= self.ui.time_input02.value():
-                    self.timer_first.stop()
-                    self.count_first_ = 0
-                    self.drive.move(speed=self.ui.speed_input.value())
             else:
                 print("Not_Timer")
         else:
             print("Car_Stop")
             self.timer_first.stop()
-            self.count_first_ = 0
+            self.timer_turn.stop()
+            self.count_first_ = self.count_turn_ = 0
             self.ui.label_8.setText(f'直行秒數:0秒')
             self.drive.stop()
     def clicked_Time_check(self):
@@ -59,9 +53,16 @@ class MainWindow(QtWidgets.QMainWindow):
     def count_first(self):
         self.count_first_ = self.count_first_ + 1
         self.ui.label_8.setText(f'直行秒數:{self.count_first_ / 10}秒')
+        if self.count_first_ >= self.ui.time_input01.value()*10:
+            self.drive.move_RL(speed=self.ui.speed_input.value())
+            self.timer_turn.start(100)
+            self.timer_first.stop()
+            self.count_first_ = 0
     def count_turn(self):
         self.count_turn_ = self.count_turn_ + 1
-        #self.ui.label_8.setText(f'目前秒數:{self.count_turn_ / 10}秒')
+        self.ui.label_8.setText(f'轉彎秒數:{self.count_turn_ / 10}秒')
+        if self.count_turn_ >= self.ui.time_input02.value()*10:
+            self.drive.move(speed=self.ui.speed_input.value())
 
 if __name__ == '__main__':
     import sys
