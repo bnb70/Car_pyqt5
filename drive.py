@@ -50,18 +50,16 @@ class car:
         GPIO.output(self.MOTOR_R_DIR_PIN, GPIO.LOW)
         GPIO.output(self.MOTOR_L_DIR_PIN, GPIO.LOW)
 
-        match st:
-            case 0:
-                GPIO.output(self.MOTOR_R_DIR_PIN, GPIO.LOW)
-                GPIO.output(self.MOTOR_L_DIR_PIN, GPIO.LOW)
-                L_speed = speed
-                R_speed = speed/2
-            case 1:
-                GPIO.output(self.MOTOR_R_DIR_PIN, GPIO.HIGH)
-                GPIO.output(self.MOTOR_L_DIR_PIN, GPIO.HIGH)
-                L_speed = speed/2
-                R_speed = speed
-
+        if st == 0:
+            GPIO.output(self.MOTOR_R_DIR_PIN, GPIO.LOW)
+            GPIO.output(self.MOTOR_L_DIR_PIN, GPIO.LOW)
+            L_speed = speed
+            R_speed = speed / 2
+        if st == 1:
+            GPIO.output(self.MOTOR_R_DIR_PIN, GPIO.HIGH)
+            GPIO.output(self.MOTOR_L_DIR_PIN, GPIO.HIGH)
+            L_speed = speed / 2
+            R_speed = speed
 
         self.start()
         self.MOTOR_L.ChangeDutyCycle(L_speed)
