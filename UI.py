@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(505, 244)
+        Dialog.resize(503, 244)
         self.Confirm_Button = QtWidgets.QPushButton(Dialog)
-        self.Confirm_Button.setGeometry(QtCore.QRect(380, 50, 91, 31))
+        self.Confirm_Button.setGeometry(QtCore.QRect(30, 200, 91, 31))
         self.Confirm_Button.setObjectName("Confirm_Button")
         self.Star_Button = QtWidgets.QPushButton(Dialog)
         self.Star_Button.setGeometry(QtCore.QRect(280, 200, 91, 31))
@@ -54,6 +54,20 @@ class Ui_Dialog(object):
         self.label_5 = QtWidgets.QLabel(Dialog)
         self.label_5.setGeometry(QtCore.QRect(310, 30, 41, 16))
         self.label_5.setObjectName("label_5")
+        self.speed_input = QtWidgets.QSpinBox(Dialog)
+        self.speed_input.setGeometry(QtCore.QRect(30, 120, 71, 31))
+        self.speed_input.setMinimum(10)
+        self.speed_input.setMaximum(100)
+        self.speed_input.setObjectName("speed_input")
+        self.label_6 = QtWidgets.QLabel(Dialog)
+        self.label_6.setGeometry(QtCore.QRect(30, 100, 71, 16))
+        self.label_6.setObjectName("label_6")
+        self.Time_check = QtWidgets.QPushButton(Dialog)
+        self.Time_check.setGeometry(QtCore.QRect(390, 50, 91, 31))
+        self.Time_check.setObjectName("Time_check")
+        self.label_7 = QtWidgets.QLabel(Dialog)
+        self.label_7.setGeometry(QtCore.QRect(400, 30, 71, 20))
+        self.label_7.setObjectName("label_7")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -69,6 +83,9 @@ class Ui_Dialog(object):
         self.label_3.setText(_translate("Dialog", "時間03"))
         self.label_4.setText(_translate("Dialog", "時間04"))
         self.label_5.setText(_translate("Dialog", "時間05"))
+        self.label_6.setText(_translate("Dialog", "速度(10~100)"))
+        self.Time_check.setText(_translate("Dialog", "開/關計時器"))
+        self.label_7.setText(_translate("Dialog", "計時器:關閉"))
 
 
 if __name__ == "__main__":
