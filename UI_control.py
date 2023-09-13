@@ -63,6 +63,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.label_8.setText(f'轉彎秒數:{self.count_turn_ / 10}秒')
         if self.count_turn_ >= self.ui.time_input02.value()*10:
             self.drive.move(speed=self.ui.speed_input.value())
+            self.timer_turn.stop()
+            self.count_turn_ = 0
 
 if __name__ == '__main__':
     import sys
